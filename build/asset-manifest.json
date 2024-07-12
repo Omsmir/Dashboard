@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Dashboard/static/css/main.e6022be3.css",
-    "main.js": "/Dashboard/static/js/main.2a0a1391.js",
+    "main.js": "/Dashboard/static/js/main.fe123fbe.js",
     "static/js/867.96d1b6c8.chunk.js": "/Dashboard/static/js/867.96d1b6c8.chunk.js",
     "static/js/692.b0465242.chunk.js": "/Dashboard/static/js/692.b0465242.chunk.js",
     "static/media/white.jpg": "/Dashboard/static/media/white.f5b006b29ab7db6a2580.jpg",
@@ -23,12 +23,12 @@
     "static/media/Kanbanize_logo.png": "/Dashboard/static/media/Kanbanize_logo.696f38e58eeac8b56f32.png",
     "index.html": "/Dashboard/index.html",
     "main.e6022be3.css.map": "/Dashboard/static/css/main.e6022be3.css.map",
-    "main.2a0a1391.js.map": "/Dashboard/static/js/main.2a0a1391.js.map",
+    "main.fe123fbe.js.map": "/Dashboard/static/js/main.fe123fbe.js.map",
     "867.96d1b6c8.chunk.js.map": "/Dashboard/static/js/867.96d1b6c8.chunk.js.map",
     "692.b0465242.chunk.js.map": "/Dashboard/static/js/692.b0465242.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6022be3.css",
-    "static/js/main.2a0a1391.js"
+    "static/js/main.fe123fbe.js"
   ]
 }
