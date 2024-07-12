@@ -1,0 +1,174 @@
+:root {
+  --hover-color: #e3ebf7;
+  --cart-color: #a6c5df;
+  --red-color: #a91d3a;
+  --back-color:#182444;
+  --main-transition: 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+* {
+
+  box-sizing: border-box;
+}
+
+svg {
+  transition: var(--main-transition) !important;
+}
+section {
+  overflow: hidden;
+}
+img {
+  user-select: none;
+}
+
+.profileImage {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.profileButton {
+  position: relative;
+  width: 55px;
+  height: 55px;
+}
+
+.profileImage .Menu {
+  position: absolute;
+  margin-top: 60px;
+  right: 0px;
+}
+
+.Menu ul {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.Menu li a {
+  font-family: "Merriweather Sans", sans-serif;
+}
+.UserInformationCard {
+  box-shadow: none !important;
+  border-radius: unset !important;
+  overflow: visible !important;
+}
+.UserInformationArea {
+  position: relative;
+  background-color: var(--back-color);
+  height: 90px;
+}
+.UserInformationArea::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 25%;
+  border-style: solid;
+  top: -10px;
+  right: 15px;
+  border-width: 0 11px 12px;
+  border-color: transparent transparent var(--back-color) transparent;
+}
+.userInformtionInputs {
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  color: #fff;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.UserInformationFromNav {
+  width: 100%;
+}
+.UserInformationFromNav h4 {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.UserInformationFromNav p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.UserInformationArea p,
+.UserNotificationArea p,
+.UserNotificationArea h1,
+.UserInformationArea h1 {
+  font-family: "Merriweather Sans", sans-serif !important;
+}
+
+/* Notification Menu */
+
+.StackLink {
+  margin-right: 20px;
+  transition: var(--main-transition);
+}
+
+.StackLink #NotificationBadge svg:hover {
+  color: var(--hover-color);
+}
+.Notifications {
+  position: relative;
+}
+.Notifications .Menu {
+  position: absolute;
+  right: 20%;
+}
+
+.NotificationMenu {
+  box-shadow: none !important;
+  border-radius: unset !important;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--back-color) !important;
+}
+.UserNotificationArea {
+  color: #fff;
+  text-align: center;
+}
+.UserNotificationArea h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.UserNotificationArea p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+#NotificationBadge {
+  position: relative;
+}
+#NotificationBadge svg {
+  font-size: 22px;
+}
+
+#NotificationBadge .NotificationBadge {
+  position: absolute;
+  pointer-events: none;
+  cursor: none;
+  left: 10px;
+  top: -5px;
+  z-index: 2;
+}
+.Notifictionbar {
+  width: 100%;
+}
+.Notifictionbar h4,.MenuBar p {
+  font-family: "Merriweather Sans", sans-serif !important;
+  display: flex;
+  align-items: center;
+}
+.BadgeSvg {
+  margin-left: 5px;
+}
+.BadgeSvg svg {
+  font-size: 15px !important;
+  transition: none !important;
+}

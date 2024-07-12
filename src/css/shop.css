@@ -1,0 +1,79 @@
+:root {
+  --hover-color: #e3ebf7;
+  --cart-color: #a6c5df;
+  --red-color: #a91d3a;
+  --textHover-color:#0000003c;
+  --main-transition: 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+* {
+
+  box-sizing: border-box;
+}
+
+svg {
+  transition: var(--main-transition) !important;
+}
+section {
+  overflow: hidden;
+}
+img {
+  user-select: none;
+}
+
+section[id="shop"] {
+  padding-top: 90px;
+}
+section[id="shop"] .structure {
+  padding: 0;
+}
+section[id="shop"] .breadcrumb,
+section[id="shop"] .categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section[id="shop"] .categories {
+    background: #eee;
+}
+section[id="shop"] .breadcrumb {
+  background-color: #386bc0;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+section[id="shop"] .breadcrumb nav ol li a {
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+}
+section[id="shop"] .breadcrumb nav ol li a.active {
+  text-decoration: underline;
+}
+
+section[id="shop"] .MuiBreadcrumbs-separator {
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #fff;
+}
+
+section[id="shop"] .ShopCatog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+}
+section[id="shop"] .ShopCatog a {
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    color: black !important;
+    transition:var(--main-transition) ;
+    text-transform: uppercase;
+}
+ 
+section[id="shop"] .ShopCatog a:hover,
+section[id="shop"] .ShopCatog a.active {
+    color: var(--textHover-color) !important;
+}
+section[id="shop"] .ShopCatog a:not(:last-of-type) {
+    margin-right: 10px;
+}

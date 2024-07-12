@@ -1,0 +1,194 @@
+@media (min-width: 993px) {
+  .CartMobileIn {
+    width: 750px !important;
+  }
+}
+
+@media (max-width: 1198px) {
+  /* section[id="services"] .structure .row .col ,
+    section[id="about"] .structure .row .col {
+        font-size: 2rem;
+    } */
+}
+
+@media (max-width: 993px) {
+  .navbar-collapse {
+    flex-direction: column;
+  }
+  .navbar-nav li:not(:last-of-type) {
+    margin-right: 0;
+  }
+  .left {
+    width: auto;
+  }
+  .inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 5px;
+  }
+  .structure {
+    padding: 0 !important;
+  }
+  section[id="sponsors"] strong {
+    font-size: 10px;
+    top: -8px;
+  }
+  .sponsor-images .col {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  section[id="sponsors"] {
+    padding-bottom: 0 !important;
+  }
+  section[id="services"] {
+    padding-top: 0 !important;
+  }
+  section[id="services"] .structure .row .col:has(h3) h3 {
+    text-align: center;
+    font-size: 35px;
+  }
+  /* Login Section */
+
+  section[id="login"] #ImageColumn {
+    display: none;
+  }
+  section[id="login"] .login-brand {
+    text-align: center !important;
+  }
+  /* Login Reset */
+  section[id="login"] .formColumn {
+    position: absolute;
+    transform: translate(-50%, 50%);
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-up {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .paper .name .head {
+    font-size: 14px;
+  }
+  .paper .name .ref {
+    font-size: 10px;
+  }
+  .paper .unit-price {
+    font-size: 14px;
+  }
+  .paper .total {
+    font-size: 14px;
+  }
+  .header .col {
+    font-size: 13px;
+    padding: 1px;
+  }
+  .first h4 {
+    font-size: 90px;
+  }
+  .first p {
+    font-size: 15px;
+  }
+
+  section[id="sponsors"] strong {
+    font-size: 8px;
+    top: -8px;
+  }
+  .sponsor-images .col {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100px;
+  }
+  .box-parent {
+    display: none;
+  }
+  section[class="Account"] .UserProfileCard {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .first h4 {
+    font-size: 70px;
+  }
+  .first p {
+    font-size: 15px;
+  }
+  .inner {
+    padding-left: 40px !important;
+    padding-right: 0 !important;
+  }
+  .toast {
+    width: 250px !important;
+  }
+  section[id="services"] .Card .card-img div svg {
+    width: 25px;
+  }
+  section[id="services"] .Card .card-img div {
+    width: 55px;
+    height: 55px;
+  }
+  h3 {
+    font-size: 40px !important;
+  }
+  #main-head {
+    font-size: 18px !important;
+  }
+  #card-para {
+    font-size: 14px !important;
+  }
+  section[id="services"] .structure .row .col:has(h3) h3 {
+    text-align: left;
+  }
+  .CartMobileOut {
+    margin-bottom: 15px;
+  }
+  /* login section */
+  section[id="login"] #horizontal_login {
+    flex-direction: column;
+  }
+  section[class="Account"] .UserProfileCard{
+    padding: 0;
+  }
+ 
+  
+  section[class="Account"] .UserEmail p {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 367px) {
+
+  .first h4 {
+    font-size: 60px;
+  }
+  .header .col {
+    font-size: 13px;
+    padding: 0;
+  }
+  .header .col div {
+    white-space: nowrap;
+  }
+  .increase svg,
+  .decrease svg {
+    font-size: 13px;
+  }
+  .line > span {
+    font-size: 13px;
+  }
+  .paper .remove svg {
+    font-size: 20px;
+  }
+  /*login section*/
+
+  section[id="login"] h1 {
+    font-size: 20px;
+  }
+
+
+}

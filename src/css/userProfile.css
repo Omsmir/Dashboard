@@ -1,0 +1,141 @@
+:root {
+  --red-color: #a91d3a;
+  --main-color:#a3a8b5;
+  --section-color:#f9f9f9;
+  --text-color:#302d43;
+  --back-color:#182444;
+  --main-transition: 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+.Drawer > div {
+    z-index: 1220;
+    padding-top: 5rem;
+    background: var(--back-color);
+    color: #fff ;
+}
+
+.MainToggle svg{
+  color: var(--main-color);
+}
+.MainToggle{
+  position: relative;
+}
+.MainToggle:not(:last-of-type) {
+  margin-bottom: 10px !important;
+}
+.MainToggle span {
+  font-family: "Merriweather Sans", sans-serif ;
+
+}
+
+.SecToggleUl {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.SecToggle{
+  position: relative;
+  display: none;
+}
+
+.SecToggle::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  left: 0;
+  opacity: 0.6;
+}
+
+.SecToggle a {
+  text-decoration: none;
+}
+
+.SecToggle span {
+  font-family: "Merriweather Sans", sans-serif ;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #fff;
+}
+/* Account Section Dashboard start */
+
+section[class="Account"] {
+  padding-top: 90px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: var(--section-color);
+}
+
+section[class="Account"] .UserDetails {
+  padding: 10px;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+section[class="Account"] .UserCard{
+  border: none;
+}
+
+section[class="Account"] .UserInnerCard .ant-card-meta-avatar span{
+  width: 55px;
+  height: 55px;
+}
+section[class="Account"] h4 {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+section[class="Account"] h4 , section[class="Account"] p {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+section[class="Account"] .UserAddtional{
+  padding: 24px;
+}
+
+
+[data-pc-section="headerrow"] th,[data-pc-section="bodyrow"] td{
+  padding: 10px;
+}
+
+/* Setting Section */
+.p-toast {
+  z-index: 1350 !important;
+}
+.p-fileupload-buttonbar {
+  border: none;
+}
+.p-fileupload-content{
+  border: none;
+}
+
+.UserProfileCard {
+  box-shadow: none !important;
+  border: none !important;
+  padding: 1.25rem;
+}
+.VerifyEmail {
+  padding: 0 !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.UserEmail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5px !important;
+}
+.DangerBadge span{
+  background: #dc3545 ;
+  width: 80px !important;
+  color: #fff;
+}

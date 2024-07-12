@@ -1,0 +1,152 @@
+:root {
+    --blue-color: #0d6efd;
+    --cart-color:#a6c5df;
+    --sec-color: #6c757d;
+    --main-transition: 0.3s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+section[id='login'] p,h1 {
+    font-family: "Lato", sans-serif !important;
+
+}
+section[id='login'] .structure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+section[id='login']{
+    padding-top: 70px !important;
+}
+
+section[id='login'] .login-img {
+    width: 100%;
+    max-height: 650px;
+}
+
+
+
+section[id='login'] #FormColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section[id='login'] .login-card {
+    box-shadow: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: visible;
+}
+section[id='login'] .layout {
+    display: flex;
+    justify-content: center;
+}
+section[id='login'] .login-brand {
+    font-family: "Rubik Moonrocks", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 50px !important;
+    color: var(--blue-color);
+    text-align: left;
+}
+
+section[id='login'] .login-methods  {
+    width: 100%;
+}
+
+section[id='login'] .login-methods > button {
+    width: 50%;
+    border: 1px solid  rgba(151, 136, 136, 0.5);
+    color: black;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: capitalize;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    padding: 10px;
+}
+
+section[id='login'] .login-methods button span svg ,
+section[id='login'] .login-methods button span img{
+    width: 25px !important;
+    height: 25px !important;
+    color: #0d6efd !important;
+}
+
+
+
+section[id='login'] #horizontal_login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section[id='login'] #horizontal_login .loginButton {
+    margin-right: 0;
+}
+
+section[id='login'] .frame {
+    padding: 10px;
+}
+
+section[id='login'] .login-card .create-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section[id='login'] .login-card .create-account  p ,
+section[id='login'] .login-line p {
+    font-size: 14px;
+}
+
+.login-forget {
+    font-size: 14px;
+    transition: var(--main-transition);
+    margin-left: 15px;
+}
+.login-forget:hover {
+    color: #a6c5df !important;
+}
+section[id="login"] #horizontal_login .Stack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+section[id="login"] #horizontal_login .remember {
+    justify-content: flex-start;
+
+}
+
+section[id="login"] #horizontal_login .remember,
+section[id="login"] #horizontal_login .Forget {
+    display: flex;
+    width: 50%;
+    margin-right: 0;
+}
+section[id="login"] #horizontal_login .Forget  {
+    justify-content: flex-end;
+
+}
+
+
+
+section[id="login"] #horizontal_login .email,
+  section[id="login"] #horizontal_login .password {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+
+  :where(.css-dev-only-do-not-override-m4timi).ant-input-affix-wrapper{
+    padding: 8px 11px !important;
+  }
