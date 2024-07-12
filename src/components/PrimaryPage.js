@@ -20,6 +20,7 @@ import { PrivateRoutes, LoginRoute } from "./PrivateRoutes";
 import DefaultRoutes from "./DefaultRoutes";
 import AdminRoute from "./AdminRoute";
 import DashBoard from "../pages/Dashboard/Dashboard";
+import Error404 from "../err/404";
 import {
   collection, 
   getDocs,
@@ -291,14 +292,14 @@ const sendSpecificUserNotifications = async () => {
             <Route path="/Reset" element={<ResetPassword />} />
           </Route>
           {/* DefaultRoutes */}
-          <Route element={<DefaultRoutes />}>
-            <Route path="/" element={<Home />} />
+          <Route errorElement={<Error404 />} element={<DefaultRoutes />}>
+            <Route  path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/Shop" element={<Shop />} />
             <Route path="/women" element={<Women />} />
             <Route path="/men" element={<Men />} />
             <Route path="/sports" element={<Sport />} />
-            <Route path="*" element={"<h1>Error</h1>"} />
+            <Route Component={<Error404 />} />
           </Route>
         </Routes>
       </Router>
