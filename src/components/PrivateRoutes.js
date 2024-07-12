@@ -26,7 +26,7 @@ const PrivateRoutes = () => {
     <PrivateCont.Provider
       value={{  elements, SetElements, Setting, SetSetting }}
     >
-      {user ? <Outlet /> : <Navigate to={"/login"} />}
+      {user ? <Outlet /> : <Navigate to={"/"} />}
     </PrivateCont.Provider>
   );
 };
