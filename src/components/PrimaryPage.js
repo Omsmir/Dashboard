@@ -299,7 +299,7 @@ const sendSpecificUserNotifications = async () => {
             <Route path="/women" element={<Women />} />
             <Route path="/men" element={<Men />} />
             <Route path="/sports" element={<Sport />} />
-            <Route Component={<Error404 />} />
+            <Route path="/*" element={<Error404 />} />
           </Route>
         </Routes>
       </Router>
