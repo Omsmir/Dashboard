@@ -77,8 +77,8 @@ const NavbarNav = () => {
   }, []);
 
   return (
-    <Navbar expand="lg" fixed="top">
-      <Container className="nav-up" fluid>
+    <Navbar expand="lg" fixed="top" className={`${mediaLarge ? "" : "px-6"}`}>
+      <Container fluid>
         {ToggleStateOfDash && mediaLarge ? (
           <DashToggle />
         ) : (
@@ -97,7 +97,7 @@ const NavbarNav = () => {
           ) : (
             ""
           )}
-          <Navbar.Toggle aria-controls="navbarScroll" id="omar" />
+          <Navbar.Toggle aria-controls="navbarScroll"  />
         </Box>
         <Navbar.Collapse id="navbarScroll">
           <Nav className="w-50">

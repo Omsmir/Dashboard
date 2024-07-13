@@ -1,16 +1,15 @@
 :root {
   --dark-color: #e8ca4a;
-  --green-color: #a1e1e1;
   --hover-color: #0078aa;
-  --cart-color: #a6c5df;
   --red-color: #a91d3a;
   --blue-color: #003285;
+  --back-color: #182444;
   --section-color: #eff7fa;
+  --body-color: #f9f9f9;
   --main-transition: 0.3s ease-in-out;
   scroll-behavior: smooth;
 }
 * {
-
   box-sizing: border-box;
 }
 
@@ -26,13 +25,18 @@ img {
 
 body {
   position: relative;
+  background: var(--body-color) !important;
 }
-
-.nav-up {
-  padding-left: 92px !important;
-  padding-right: 92px !important;
+/* All Backdrops */
+.css-1ji7omv-MuiBackdrop-root{
+  z-index:1000 !important ;
 }
-
+.Btn404{
+  background: #0f678d !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  text-transform: capitalize !important;
+}
 .navbar {
   transition: 0.8s ease-in-out;
   box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
@@ -40,7 +44,7 @@ body {
     0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
     0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
   background: #fff;
-  z-index: 1300 !important;
+  z-index: 1055 ;
 }
 
 .navbar-brand {
@@ -48,7 +52,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   transition: var(--main-transition);
-
 }
 
 .navbar-brand p {
@@ -84,7 +87,6 @@ li {
   align-items: center;
   transition: var(--main-transition);
 }
-
 
 .navbar-nav a {
   font-family: "Merriweather Sans", sans-serif;
@@ -129,8 +131,6 @@ li {
   flex-direction: row;
 }
 
-.links svg {
-}
 .links .stackLink {
   margin-right: 20px;
 }
@@ -146,13 +146,15 @@ div.stackLink svg {
 
 /* Home */
 
-.structure {
-  padding-left: 20px;
-  padding-right: 20px;
+section[id="HomeBanner"] {
+  padding-top: 90px !important;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 section[id="HomeBanner"] .structure {
-  border-radius: 25px;
-  background-color: var(--green-color);
+  border-radius: 15px;
+  background-color: var(--back-color);
 }
 
 .IceGroup {
@@ -160,31 +162,35 @@ section[id="HomeBanner"] .structure {
   width: 100%;
   height: 100%;
   z-index: 0;
+  color: #fff;
+  left: 0;
 }
 .AcUnit {
   position: absolute;
 }
 .AcUnit:nth-child(1) {
   top: 5%;
-  right: 5%;
+  right: 2%;
 }
 .AcUnit:nth-child(2) {
   bottom: 5%;
-  left: 0;
+  left: 2%;
 }
 .AcUnit:nth-child(3) {
-  right: 5%;
+  right: 2%;
   bottom: 5%;
 }
 .AcUnit:nth-child(4) {
   top: 5%;
-}
-.inner {
-  display: flex;
-  align-items: center;
+  left: 2%;
 }
 
-.first h4 {
+.first {
+  padding-left: 2.2rem !important;
+  padding-right: 2.2rem !important;
+}
+
+.first h3 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 800;
   font-size: 110px;
@@ -192,16 +198,27 @@ section[id="HomeBanner"] .structure {
   transition: var(--main-transition);
   min-height: 400px;
   width: 100%;
-  overflow: hidden;
+  color: #fff;
 }
-.first h4::first-letter {
-  color: white;
-}
+
 .first p {
-  font-size: 18px;
+  font-family: "Merriweather Sans", sans-serif ;
+  font-size: 16px;
   text-transform: capitalize;
-  transition: var(--main-transition);
   margin-bottom: 10px;
+  color: #fff;
+}
+
+.first .shopBtn {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+    background: #6366f1;
+    border: 1px solid #6366f1;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 6px;
 }
 
 /* toast */
@@ -342,56 +359,7 @@ section[id="HomeBanner"] .structure {
   color: var(--blue-color);
   text-transform: capitalize;
 }
-/* Sponsor */
-
-@keyframes tape {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.sponsor-line {
-  border-top: 2px solid rgba(151, 136, 136, 0.5);
-}
-
-section:not([id="HomeBanner"]) strong {
-  position: absolute;
-  background-color: white;
-  top: -14px;
-  left: 15%;
-}
-.sponsor-images {
-  width: 100%;
-  user-select: none;
-}
-.ticker-tape-container {
-  overflow-x: hidden;
-  display: flex;
-}
-.ticker {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex: 0 0 auto;
-  gap: 1rem;
-  animation: tape 30s linear normal infinite;
-  animation-delay: 0s;
-}
-.sponsor-images .col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  padding-left: 40px;
-  padding-right: 40px;
-  transition: var(--main-transition);
-}
-
-/* Sponsor End */
-
+/* Cart */
 /* services */
 
 section[id="services"] .Card {

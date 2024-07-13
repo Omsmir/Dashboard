@@ -356,9 +356,9 @@ return (
                         alt="Profile Picture"
                       />
                       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                        <CardContent sx={{ flex: '1 0 auto' }}>
+                        <CardContent sx={{ flex: '1 0 auto',  }} className={isMediumScreen && "px-0" }>
                           <Typography component="h4">
-                            {user?.providerData.map(data => data.displayName).join(", ")}
+                            {user?.displayName}
                           </Typography>
                           <Typography variant="subtitle1" className="UserEmail" color="text.secondary">
                             <Typography component="h6">{userEmail}</Typography>

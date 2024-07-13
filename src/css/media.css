@@ -1,8 +1,3 @@
-@media (min-width: 993px) {
-  .CartMobileIn {
-    width: 750px !important;
-  }
-}
 
 @media (max-width: 1198px) {
   /* section[id="services"] .structure .row .col ,
@@ -12,6 +7,7 @@
 }
 
 @media (max-width: 993px) {
+  /* Navbar */
   .navbar-collapse {
     flex-direction: column;
   }
@@ -21,27 +17,15 @@
   .left {
     width: auto;
   }
-  .inner {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   .navbar-nav .nav-item {
     margin-bottom: 5px;
   }
+    /* Navbar */
+
   .structure {
     padding: 0 !important;
   }
-  section[id="sponsors"] strong {
-    font-size: 10px;
-    top: -8px;
-  }
-  .sponsor-images .col {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  section[id="sponsors"] {
-    padding-bottom: 0 !important;
-  }
+
   section[id="services"] {
     padding-top: 0 !important;
   }
@@ -51,26 +35,20 @@
   }
   /* Login Section */
 
+  section[id="login"] .FormColumn {
+    height: 650px ;
+  }
   section[id="login"] #ImageColumn {
     display: none;
   }
   section[id="login"] .login-brand {
     text-align: center !important;
   }
-  /* Login Reset */
-  section[id="login"] .formColumn {
-    position: absolute;
-    transform: translate(-50%, 50%);
-    top: 50%;
-    left: 50%;
-  }
+
 }
 
 @media (max-width: 767px) {
-  .nav-up {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-  }
+  /* Cart MobileIn */
   .paper .name .head {
     font-size: 14px;
   }
@@ -87,24 +65,30 @@
     font-size: 13px;
     padding: 1px;
   }
-  .first h4 {
+    /* Cart MobileIn */
+
+      /* HomeBanner  */
+
+  .first h3 {
     font-size: 90px;
   }
   .first p {
     font-size: 15px;
   }
 
-  section[id="sponsors"] strong {
-    font-size: 8px;
-    top: -8px;
-  }
-  .sponsor-images .col {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100px;
-  }
+        /* HomeBanner  */
+
   .box-parent {
     display: none;
+  }
+  section[id="login"] .MobileLogin{
+    width: 100%;
+}
+
+
+section[id="login"] #horizontal_login .email,
+  section[id="login"] #horizontal_login .password {
+    margin-bottom: 1.2rem !important;
   }
   section[class="Account"] .UserProfileCard {
     flex-direction: column;
@@ -112,15 +96,11 @@
 }
 
 @media (max-width: 576px) {
-  .first h4 {
-    font-size: 70px;
+  .first h3 {
+    font-size: 70px ;
   }
   .first p {
     font-size: 15px;
-  }
-  .inner {
-    padding-left: 40px !important;
-    padding-right: 0 !important;
   }
   .toast {
     width: 250px !important;
@@ -131,15 +111,6 @@
   section[id="services"] .Card .card-img div {
     width: 55px;
     height: 55px;
-  }
-  h3 {
-    font-size: 40px !important;
-  }
-  #main-head {
-    font-size: 18px !important;
-  }
-  #card-para {
-    font-size: 14px !important;
   }
   section[id="services"] .structure .row .col:has(h3) h3 {
     text-align: left;
@@ -191,4 +162,21 @@
   }
 
 
+}
+
+
+/* min-width */
+@media (min-width: 993px) {
+  .CartMobileIn {
+    width: 750px !important;
+  }
+}
+
+
+@media (min-width: 576px) {
+  :where(.css-dev-only-do-not-override-m4timi).ant-col-sm-8 {
+    
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
