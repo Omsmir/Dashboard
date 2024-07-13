@@ -1,34 +1,28 @@
 {
   "files": {
-    "main.css": "/Dashboard/static/css/main.e6022be3.css",
-    "main.js": "/Dashboard/static/js/main.cb109831.js",
+    "main.css": "/Dashboard/static/css/main.d19f2c0f.css",
+    "main.js": "/Dashboard/static/js/main.0ddf11bd.js",
     "static/js/867.96d1b6c8.chunk.js": "/Dashboard/static/js/867.96d1b6c8.chunk.js",
     "static/js/692.b0465242.chunk.js": "/Dashboard/static/js/692.b0465242.chunk.js",
     "static/media/white.jpg": "/Dashboard/static/media/white.f5b006b29ab7db6a2580.jpg",
     "static/media/Head.png": "/Dashboard/static/media/Head.5739cac7c0173216ae66.png",
-    "static/media/welmart.png": "/Dashboard/static/media/welmart.cb8bc2d8ddbd79b11744.png",
+    "static/media/security.png": "/Dashboard/static/media/security.4a44a1f1cdd730c9322f.png",
     "static/media/Inter-italic.var.woff2?v=3.19": "/Dashboard/static/media/Inter-italic.var.184ec460d45b3caf5b0b.woff2",
     "static/media/Inter-roman.var.woff2?v=3.19": "/Dashboard/static/media/Inter-roman.var.71b058b66381db72226b.woff2",
     "static/media/primeicons.svg": "/Dashboard/static/media/primeicons.6ed59f962963a4a73af2.svg",
-    "static/media/amazon.png": "/Dashboard/static/media/amazon.e8a0520be47e38ae70ca.png",
-    "static/media/security (1).jpg": "/Dashboard/static/media/security (1).9b8f7eef3fb225d15fbd.jpg",
-    "static/media/fedex.png": "/Dashboard/static/media/fedex.1833e8e4d180ae7af06b.png",
     "static/media/about.jpg": "/Dashboard/static/media/about.e0c0d73d6b1f28eb683b.jpg",
     "static/media/primeicons.eot": "/Dashboard/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
     "static/media/primeicons.woff": "/Dashboard/static/media/primeicons.8931fda1930c3bd21e96.woff",
     "static/media/primeicons.ttf": "/Dashboard/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
-    "static/media/ebay.png": "/Dashboard/static/media/ebay.84b52bd40d0a8dc7b676.png",
-    "static/media/merck.png": "/Dashboard/static/media/merck.b4c295fd83f6e04c97e0.png",
     "static/media/primeicons.woff2": "/Dashboard/static/media/primeicons.024b32cc7bf399b1a847.woff2",
-    "static/media/Kanbanize_logo.png": "/Dashboard/static/media/Kanbanize_logo.696f38e58eeac8b56f32.png",
     "index.html": "/Dashboard/index.html",
-    "main.e6022be3.css.map": "/Dashboard/static/css/main.e6022be3.css.map",
-    "main.cb109831.js.map": "/Dashboard/static/js/main.cb109831.js.map",
+    "main.d19f2c0f.css.map": "/Dashboard/static/css/main.d19f2c0f.css.map",
+    "main.0ddf11bd.js.map": "/Dashboard/static/js/main.0ddf11bd.js.map",
     "867.96d1b6c8.chunk.js.map": "/Dashboard/static/js/867.96d1b6c8.chunk.js.map",
     "692.b0465242.chunk.js.map": "/Dashboard/static/js/692.b0465242.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6022be3.css",
-    "static/js/main.cb109831.js"
+    "static/css/main.d19f2c0f.css",
+    "static/js/main.0ddf11bd.js"
   ]
 }
