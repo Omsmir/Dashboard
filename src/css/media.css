@@ -84,7 +84,16 @@
   section[id="login"] .MobileLogin{
     width: 100%;
 }
+.invoice-template {
+  padding: 0 !important;
+}
+.invoice-details {
+  flex-direction: column;
+}
 
+.invoice-footer p{
+text-align: center;
+}
 
 section[id="login"] #horizontal_login .email,
   section[id="login"] #horizontal_login .password {

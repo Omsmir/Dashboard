@@ -23,45 +23,28 @@ const ListComponent = ({ Id, parentId, state, Name, index }) => {
   const { elements, SetElements, Setting, SetSetting } =
     useContext(PrivateCont);
 
-    const [liState,setLiState] = useState(false)
+    const [liState,setLiState] = useState(null)
   const show = { display: "flex", opacity: 1, height: "50px" };
   const hide = { opacity: 0, height: 0, transitionEnd: { display: "none" } };
 
 
 
-  const updateSecStates = (newState, id,index) => {
-    setLiState(index === liState ? true : index)
-    SetSetting(
-      Setting.map((ele) =>
-         ele.Id === id
-          ? { ...ele, state: newState }
-          : ele
-      )
-    );
+  const updateSecStates = (index,newStateVar) => {
+    setLiState(index === liState ? null : index)
+
+    SetSetting(Setting.map((ele) => ele.Id === index ? {...ele,state:newStateVar} : {...ele,state:false}))
+
   };
 
   const updateAllStates = (NewState) => {
-    setActiveIndex(false)
     SetElements(elements.map((ele) => ({ ...ele, state: NewState })));
   };
 
-  const [activeIndex, setActiveIndex] = useState(null);
 
   // Function to handle click on list item
-  const handleItemClick = (index,Id,NewStateVar,SetElements,elements) => {
-    setActiveIndex(index === activeIndex ? true : index);
-
-    SetElements(
-      elements.map((ele) =>
-        ele.parentId === Id
-          ? { ...ele, state: NewStateVar }
-          : ele && ele.Id === Id
-          ? { ...ele, state: NewStateVar }
-          : ele
-      )
-    );
+  const handleItemClick = (Id,NewStateVar) => {
+    SetElements(  elements.map((ele) =>  ele.parentId === Id   ? { ...ele, state: NewStateVar }  : ele ));
   };
-
 
   useEffect(() => {
     if (!open) {
@@ -89,9 +72,9 @@ const ListComponent = ({ Id, parentId, state, Name, index }) => {
           justifyContent: open ? "initial" : "center",
           px: 2.5,
         }}
-        style={{ background: index === activeIndex ? "#2c3448" : "none" }}
+        style={{ background: state ?  "#2c3448" : "none" }}
         className="MainToggle"
-        onClick={() => handleItemClick(index,parentId,!state,SetElements,elements)}
+        onClick={() => handleItemClick(parentId,!state)}
       >
         <ListItemIcon
           sx={{ minWidth: 0, mr: open ? 2 : "auto", justifyContent: "center" }}
@@ -108,33 +91,35 @@ const ListComponent = ({ Id, parentId, state, Name, index }) => {
         {Setting.map((ele,index) => {
           if (ele.parentId === parentId) {
             return (
-              <motion.li
-                key={ele.Name}
-                animate={state ? show : hide}
-                transition={{ duration: 0.5 }}
-                className="SecToggle"
-                onClick={() => updateSecStates(true, ele.Id,index)}
-                style={{
-                  background: ele.state ? "#2c3448" : "none",
-                  padding: 0,
-                }}
-              >
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                  as={NavLink}
-                  to={`/${ele.Name}`}
-                >
-                  <ListItemText
-                    primary={ele.Name}
-                    sx={{ opacity: open ? 1 : 0 }}
-                  />
-                </ListItemButton>
-              </motion.li>
-            );
+ <motion.li
+    key={ele.Name}
+    animate={state ? show : hide}
+    transition={{ duration: 0.5 }}
+    className="SecToggle"
+    onClick={() => updateSecStates(ele.Id,true)}
+
+    style={{
+      background: ele.state ? "#2c3448" : "none",
+      padding: 0,
+    }}
+  >
+    <ListItemButton
+    
+
+      sx={{
+        minHeight: 48,
+        justifyContent: open ? "initial" : "center",
+        px: 2.5,
+      }}
+      as={NavLink}
+      to={`/${ele.Name}`}
+    >
+      <ListItemText
+        primary={ele.Name}
+        sx={{ opacity: open ? 1 : 0 }}
+      />
+    </ListItemButton>
+  </motion.li>            );
           }
           return null;
         })}
@@ -210,7 +195,7 @@ const DrawerItem = ({ component,Id }) => {
     <Box sx={{ display: "flex" }}>
       {isSmallScreen && (
         <Backdrop
-          sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+          sx={{ color: "#fff", zIndex: 1000 }}
           open={backdropOpen}
           onClick={handleBackdropClose}
         />

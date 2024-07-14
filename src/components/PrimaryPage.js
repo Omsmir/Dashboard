@@ -33,6 +33,7 @@ import {
   orderBy
 } from "firebase/firestore";
 import { db } from "../config/firebase";
+import Invoice from "../pages/Profile/Invoice";
 export const FuncContext = createContext();
 
 const Primary = () => {
@@ -272,7 +273,8 @@ const sendSpecificUserNotifications = async () => {
         SetToggle,
       }}
     >
-      <Router basename="/Dashboard">
+      {/* basename="/Dashboard" */}
+      <Router >
         <NavbarNav />
         <Routes>
           {/* PrivateRoutes */}
@@ -281,6 +283,7 @@ const sendSpecificUserNotifications = async () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/Account" element={<Account />} />
             <Route path="/Settings" element={<Settings />} />
+            <Route path="/Invoice" element={<Invoice />} />
             <Route element={<AdminRoute />}>
             <Route path="/Dashboard" element={<DashBoard />} />
             </Route>
@@ -292,8 +295,8 @@ const sendSpecificUserNotifications = async () => {
             <Route path="/Reset" element={<ResetPassword />} />
           </Route>
           {/* DefaultRoutes */}
-          <Route errorElement={<Error404 />} element={<DefaultRoutes />}>
-            <Route  path="/" element={<Home />} />
+          <Route errorElement={<Error404 />}  element={<DefaultRoutes />}>
+            <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/Shop" element={<Shop />} />
             <Route path="/women" element={<Women />} />

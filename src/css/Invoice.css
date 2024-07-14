@@ -1,0 +1,81 @@
+:root{
+    --hover-color: #0078aa;
+
+}
+
+.invoice-parent {
+  padding: 0 !important;
+}
+.invoice-template {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .invoice-panel {
+    margin-bottom: 20px;
+    padding: 5px !important;
+  }
+  
+  .p-panel .p-panel-header{
+    background: #0078aa !important;
+    color: #fff;
+}
+  .invoice-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Merriweather Sans", sans-serif !important;
+
+  }
+  
+  .invoice-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .invoice-table {
+    margin-bottom: 20px;
+  }
+  
+  .invoice-footer {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+  
+.invoice-footer p ,strong {
+    font-family: "Merriweather Sans", sans-serif !important;
+
+}
+.print-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+  @media print {
+
+    body * {
+      visibility: hidden;
+    }
+    .invoice-template, .invoice-template * {
+      visibility: visible;
+    }
+   
+    .invoice-template {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    .print-button-container{
+        visibility: hidden;
+        display: none;
+    }
+    
+    .p-panel .p-panel-header{
+      background: #0078aa !important;
+      color: #fff;
+  }
+  }
+
