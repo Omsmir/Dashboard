@@ -274,7 +274,7 @@ const sendSpecificUserNotifications = async () => {
       }}
     >
       {/* basename="/Dashboard" */}
-      <Router >
+      <Router basename="/Dashboard">
         <NavbarNav />
         <Routes>
           {/* PrivateRoutes */}
