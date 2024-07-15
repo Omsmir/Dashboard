@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Dashboard/static/css/main.d19f2c0f.css",
-    "main.js": "/Dashboard/static/js/main.0ddf11bd.js",
+    "main.css": "/Dashboard/static/css/main.5cb614d4.css",
+    "main.js": "/Dashboard/static/js/main.1a6fd872.js",
     "static/js/867.96d1b6c8.chunk.js": "/Dashboard/static/js/867.96d1b6c8.chunk.js",
     "static/js/692.b0465242.chunk.js": "/Dashboard/static/js/692.b0465242.chunk.js",
     "static/media/white.jpg": "/Dashboard/static/media/white.f5b006b29ab7db6a2580.jpg",
@@ -16,13 +16,13 @@
     "static/media/primeicons.ttf": "/Dashboard/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
     "static/media/primeicons.woff2": "/Dashboard/static/media/primeicons.024b32cc7bf399b1a847.woff2",
     "index.html": "/Dashboard/index.html",
-    "main.d19f2c0f.css.map": "/Dashboard/static/css/main.d19f2c0f.css.map",
-    "main.0ddf11bd.js.map": "/Dashboard/static/js/main.0ddf11bd.js.map",
+    "main.5cb614d4.css.map": "/Dashboard/static/css/main.5cb614d4.css.map",
+    "main.1a6fd872.js.map": "/Dashboard/static/js/main.1a6fd872.js.map",
     "867.96d1b6c8.chunk.js.map": "/Dashboard/static/js/867.96d1b6c8.chunk.js.map",
     "692.b0465242.chunk.js.map": "/Dashboard/static/js/692.b0465242.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d19f2c0f.css",
-    "static/js/main.0ddf11bd.js"
+    "static/css/main.5cb614d4.css",
+    "static/js/main.1a6fd872.js"
   ]
 }
