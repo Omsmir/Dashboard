@@ -271,7 +271,7 @@ const Primary = () => {
   }, []);
 
 
-  const router = createBrowserRouter(
+  const router = createBrowserRouter(   
     createRoutesFromElements(
       <Route path="/"  element={<NavbarNav />}>
         <Route index element={<Home />} />
@@ -292,7 +292,7 @@ const Primary = () => {
         </Route>
         <Route path="/*" element={<Error404 />} />
       </Route>
-    )
+    ),{basename:"/Dashboard"}
   );
 
   const LoginRouter = createBrowserRouter(
@@ -304,7 +304,7 @@ const Primary = () => {
       <Route path="/*" element={<Error404 />} />
 
       </Route>
-    )
+    ),{basename:"/Dashboard"}
   )
 
   return (
