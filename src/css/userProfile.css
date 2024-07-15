@@ -72,6 +72,7 @@ section[class="Account"] {
   padding-left: 10px;
   padding-right: 10px;
   background: var(--section-color);
+  width: 100%;
 }
 
 section[class="Account"] .UserDetails {

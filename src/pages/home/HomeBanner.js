@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image,Toast as MUToast ,Button as MuButton} from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
-import ShoppingCart from "../../components/cart";
+import ShoppingCart from "../Cart/Cart";
 import { AcUnit, ShoppingCartOutlined } from "@mui/icons-material";
 import { useMediaQuery, Typography, Box } from "@mui/material";
 import { useState, useEffect, useRef, useContext } from "react";

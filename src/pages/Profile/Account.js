@@ -1,21 +1,35 @@
 import { Box, Typography, useMediaQuery, Paper,Switch  } from "@mui/material";
-import { auth, db } from "../../config/firebase";
+import { auth } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import React, { useState, useEffect, useContext } from "react";
 import { Avatar, Card, Skeleton, Descriptions,Divider,  } from "antd";
-import { updateProfile } from "firebase/auth";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from "react-bootstrap";
-import Swal from "sweetalert2";
 import { FuncContext } from "../../components/PrimaryPage";
-import { DrawerItem } from "./ListComponent";
 import { DataTable,Column } from 'primereact';
 import { styled } from "@mui/material/styles";
 import "../../css/userProfile.css";
-
+import { ProfileContext } from "./Profile";
 
 
 const Account = () => {
+
+const {Setting,SetSetting} = useContext(ProfileContext)
+
+
+const updateSecStates = (index,newStateVar) => {
+
+  SetSetting(Setting.map((ele) => ele.Id === index ? {...ele,state:newStateVar} : ele))
+
+};
+
+useEffect(() => {
+  updateSecStates(3,true)
+
+
+},[])
+
+
   return (
     <motion.section
       className="Account"
@@ -25,7 +39,7 @@ const Account = () => {
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
     >
-      <DrawerItem Id={3} component={<AccountComponent />} />
+      <AccountComponent />
     </motion.section>
   );
 };

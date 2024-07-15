@@ -2,9 +2,12 @@ import { Container, Row, Nav, Col } from "react-bootstrap";
 import {
   Breadcrumbs,
 } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../../css/shop.css";
+import { createContext } from "react";
+
+export const ShopContext  = createContext()
 
 const Shop = () => {
   const visible = {
@@ -13,7 +16,9 @@ const Shop = () => {
     transition: { type: "spring", duration: 1 },
   };
 
+  const omar = 10
   return (
+    <ShopContext.Provider value={{omar}}>
     <motion.section
       id="shop"
       initial="hidden"
@@ -31,14 +36,14 @@ const Shop = () => {
         <Container fluid className="categories">
           <Row>
             <ul className="ShopCatog">        
-              <Nav.Link className="text-light" as={NavLink} to={"/Women"}>
+              <Nav.Link className="text-light" as={NavLink} to={"Women"}>
                
                 Women
               </Nav.Link>
-              <Nav.Link className="text-light" as={NavLink} to={"/Men"}>
+              <Nav.Link className="text-light" as={NavLink} to={"Men"}>
                 Men
               </Nav.Link>
-              <Nav.Link className="text-light" as={NavLink} to={"/Sports"}>
+              <Nav.Link className="text-light" as={NavLink} to={"Sports"}>
                 
                 Sports
               </Nav.Link>
@@ -52,14 +57,16 @@ const Shop = () => {
                 {" "}
                 Home
               </Nav.Link>
-              <Nav.Link className="text-light" as={NavLink} to={"/shop"}>
+              <Nav.Link className="text-light" as={NavLink} to={"/Shop"}>
                 Shop
               </Nav.Link>
             </Breadcrumbs>
           </Row>
         </Container>
+        <Outlet />
       </motion.div>
     </motion.section>
+    </ShopContext.Provider>
   );
 };
 

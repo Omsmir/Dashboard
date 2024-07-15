@@ -1,7 +1,7 @@
 import { Row, Col,  } from "react-bootstrap";
 import { useState, useContext } from "react";
 import { experimentalStyled as styled } from "@mui/material/styles";
-import { FuncContext } from "./PrimaryPage";
+import { FuncContext } from "../../components/PrimaryPage";
 import { motion } from "framer-motion";
 import {
   Typography,
@@ -121,7 +121,7 @@ const Product = (props) => {
                   <CardMedia
                     component="img"
                     height="90"
-                    image={require("../imgs/shirts/white.jpg")}
+                    image={require("../../imgs/shirts/white.jpg")}
                     alt="green iguana"
                   />
                 </CardActionArea>

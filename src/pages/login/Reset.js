@@ -153,7 +153,7 @@ const ResetPasswordComponent = () => {
                   <Form.Item className="Forget">
                     <Nav.Link
                       as={NavLink}
-                      to={"/login"}
+                      to={"/"}
                       className="login-forget text-primary"
                     >
                       Back to login

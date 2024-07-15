@@ -277,7 +277,7 @@ const CreateComponent = () => {
                 <p className="text-secondary m-0">Already have account?</p>
                 <Nav.Link
                   as={NavLink}
-                  to={"/login"}
+                  to={"/"}
                   className="login-forget text-primary text-capitalize"
                 >
                   return to login

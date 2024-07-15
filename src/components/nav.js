@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import { Nav, Navbar, Container, Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { ShoppingOutlined, HeartOutlined } from "@ant-design/icons";
 import { auth, db } from "../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -8,7 +8,7 @@ import { FuncContext } from "./PrimaryPage";
 import { Box, Typography } from "@mui/material";
 import { Menu } from "@mui/icons-material";
 import NotificationsMenu from "../pages/Profile/NotificationMenu";
-import { ProfileImg } from "../pages/Profile/Profile";
+import { ProfileImg } from "../pages/Profile/ProfileMenu";
 import { useMediaQuery, IconButton } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,16 +18,7 @@ const NavbarNav = () => {
 
   const { users, open, setOpen, ToggleStateOfDash } = useContext(FuncContext);
 
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  // Function to handle click on list item
-  const handleItemClick = (index) => {
-    setActiveIndex(index === activeIndex ? true : index);
-  };
-
   const [user] = useAuthState(auth);
-
-
 
   const handleDrawerOpen = () => {
     setOpen(!open);
@@ -43,12 +34,10 @@ const NavbarNav = () => {
     <li
       class="nav-item"
       key={props.id}
-      onClick={() => handleItemClick(props.index)}
     >
       <Nav.Link
         as={NavLink}
         to={`/${props.name}`}
-        className={props.index === activeIndex ? "active" : ""}
       >
         {props.text}
       </Nav.Link>
@@ -77,6 +66,7 @@ const NavbarNav = () => {
   }, []);
 
   return (
+  <>
     <Navbar expand="lg" fixed="top" className={`${mediaLarge ? "" : "px-6"}`}>
       <Container fluid>
         {ToggleStateOfDash && mediaLarge ? (
@@ -107,7 +97,6 @@ const NavbarNav = () => {
                   <LiItem
                     id={value.id}
                     text={value.text}
-                    index={index}
                     name={""}
                   />
                 );
@@ -116,7 +105,6 @@ const NavbarNav = () => {
                   <LiItem
                     id={value.id}
                     text={value.text}
-                    index={index}
                     name={value.text}
                   />
                 );
@@ -131,7 +119,7 @@ const NavbarNav = () => {
                   <Nav.Link
                     className="cart cartSection"
                     as={NavLink}
-                    to={"/CartSection"}
+                    to={"/Cart/CartSection"}
                   >
                     <ShoppingOutlined />
                   </Nav.Link>
@@ -169,7 +157,7 @@ const NavbarNav = () => {
             <Box className="left">
               <Typography className="links" component={"div"}>
                 <Button variant="dark">
-                  <Nav.Link as={NavLink} to={"/Login"}>
+                  <Nav.Link as={NavLink} to={"/"}>
                     Login
                   </Nav.Link>
                 </Button>
@@ -179,6 +167,8 @@ const NavbarNav = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    <Outlet />
+    </>
   );
 };
 

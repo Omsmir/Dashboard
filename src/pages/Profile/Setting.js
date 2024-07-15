@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { Container, Row, Col } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { FuncContext } from "../../components/PrimaryPage";
-import { DrawerItem } from "./ListComponent";
 import {
   Toast,
   Tag,
@@ -51,7 +50,7 @@ const Settings = () => {
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
     >
-      <DrawerItem component={<SettingComponent />} />
+    <SettingComponent />
     </motion.section>
     </MainContext.Provider>
   );

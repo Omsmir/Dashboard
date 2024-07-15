@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { Button,Toolbar ,Column,DataTable,Dialog,Panel} from 'primereact';
 import React, { useState } from "react";
-import { DrawerItem } from "./ListComponent";
 import { Col, Container, Row } from "react-bootstrap";
 import '../../css/Invoice.css';
-import { useMediaQuery } from "@mui/material";
 import "../../css/userProfile.css";
 
 const Invoice = () => {
@@ -17,7 +15,7 @@ const Invoice = () => {
       exit={{ opacity: 0, transition: { duration: 1 } }}
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
     >
-      <DrawerItem Id={3} component={<PrintInvoice />} />
+       <PrintInvoice />
     </motion.section>
      );
 }

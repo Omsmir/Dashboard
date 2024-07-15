@@ -13,13 +13,14 @@ import { auth, provider, fbProvider } from "../../config/firebase";
 import { signInWithPopup,signInWithRedirect,getRedirectResult } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import { Button, Form, Input } from "antd";
 import { LockOutlined, UserOutlined ,GoogleOutlined } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword,setPersistence,browserSessionPersistence ,browserLocalPersistence} from "firebase/auth";
 import MotionComponent from "../../components/Motion";
+import { FuncContext } from "../../components/PrimaryPage";
 import "../../css/login.css";
 const Login = () => {
   return (
@@ -53,6 +54,9 @@ const LoginComponent = () => {
     const password = [values.password].join("");
 
     try {
+ 
+      await setPersistence(auth,browserSessionPersistence)
+
       await signInWithEmailAndPassword(auth, email, password);
 
       Swal.fire({
@@ -75,6 +79,8 @@ const LoginComponent = () => {
 
   const SignInWithGoogle = async () => {
     try {
+      await setPersistence(auth,browserSessionPersistence)
+ 
       await signInWithPopup(auth, provider);
 
       Swal.fire({
@@ -95,7 +101,7 @@ const LoginComponent = () => {
   };
 
   const signInWithFacebook =   () => {
-      signInWithRedirect(auth,fbProvider).then((Result) => {
+      signInWithRedirect(auth,fbProvider).then(() => {
         getRedirectResult(auth);
 
       })
@@ -106,7 +112,11 @@ const LoginComponent = () => {
   
 
   const SignInWithFacebook = async () => {
+    
     try {
+      await setPersistence(auth,browserSessionPersistence)
+ 
+
       await signInWithPopup(auth, fbProvider);
 
       Swal.fire({
